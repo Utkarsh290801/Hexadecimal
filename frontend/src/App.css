@@ -36,3 +36,30 @@
     transform: rotate(360deg);
   }
 }
+.signup-cont{
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+.banner{
+  position: relative;
+  /* width: 90%; */
+  /* margin: auto; */
+}
+.heading{
+  position: absolute;
+  top: 25%;
+  /* width: 100%; */
+  /* text-align: center; */
+  margin-left: 10%;
+  font-size: 4rem;
+  color: grey;
+}
+.paragraph{
+  position: absolute;
+  top: 45%;
+  font-size: 2rem;
+  margin-left: 10%;
+  color: grey;
+}
