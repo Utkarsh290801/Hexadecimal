@@ -1,11 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
-
+import { BrowserRouter, Routes, Route, Navigate, Router } from "react-router-dom";
+import SignUp from './Components/SignUp';
 function App() {
   return (
-    <div >
-     {/* <BrowserRouter></BrowserRouter> */}
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route element={<SignUp/>}/>
+    </Routes>
+    </BrowserRouter>
   );
 }
 
