@@ -8,7 +8,7 @@ const issue = new Schema({
     description: String,
     assignedBy: String,
     assignedTo:String,
-    creadtedBy:String,
+    createdBy:String,
     status:String,
     
 })

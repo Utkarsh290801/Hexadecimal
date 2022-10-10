@@ -5,7 +5,7 @@ import * as Yup from "yup";
 import { EmailOutlined, Visibility, VisibilityOff } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-const Minilogin = () => {
+const SignUp = () => {
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   const signup = {
@@ -170,4 +170,4 @@ const Minilogin = () => {
   );
 };
 
-export default Minilogin;
+export default SignUp;

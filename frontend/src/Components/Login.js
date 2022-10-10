@@ -8,6 +8,7 @@ import * as Yup from 'yup';
 const Login = () => {
     
     const [showPassword,setShowPassword]= useState(false);
+    
     const login={
         
         email: "",
@@ -15,6 +16,7 @@ const Login = () => {
     };
     const userSubmit = async(formdata) => {
         console.log(formdata);
+        
         const response= await fetch( 'http://localhost:7000/user/add',{
           method : 'POST',
             body : JSON.stringify(formdata),

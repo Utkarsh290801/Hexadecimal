@@ -31,6 +31,16 @@ router.post('/add',(req,res)=>{
         res.json(err);
     });
 })
+router.get("/getbyid/:userid", (req, res) => {
+    Model.findById(req.params.userid)
+      .then((result) => {
+        res.json(result);
+      })
+      .catch((err) => {
+        console.error(err);
+        res.json(err);
+      });
+  });
 router.delete('/delete/:userid',(req,res)=>{
     Model.findByIdAndDelete(req.params.userid)
     .then((result) => {
