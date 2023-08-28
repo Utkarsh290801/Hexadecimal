@@ -1,23 +1,22 @@
 const express = require("express");
-const app = express();
-
-const port = 7000;
-const utilRouter = require("./router/utils");
-const userRouter = require("./router/userRouter");
-const issueRouter = require("./router/issueRouter");
-const organizationRouter = require("./router/organizationRouter");
 const cors = require("cors");
-app.use(cors({ origin: "http://localhost:3000" }));
+const app = express();
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
+const port = 5000;
+const api = require("./api.json");
+const SECRET_KEY = "your-secret-key";
+const allowedOrigin = "http://localhost:3000";
+app.use(cors({ origin: allowedOrigin }));
 app.use(express.json());
-app.use(express.static("./static"));
-app.use("/util", utilRouter);
-app.use("/user",userRouter);
-app.use("/issue",issueRouter);
-app.use("/organization",organizationRouter);
-app.get("/",(req,res)=>{
-    res.send("Mini project");
+app.get("/api", (req, res) => {
+  res.json(api);
+  console.log(api);
+});
+app.get("/home", (req, res) => {
+  res.send("Hello World!");
 });
 
-app.listen(port,()=>{
-    console.log("SERVER STARTED");
-})
+app.listen(port, () => {
+  console.log(`The server has been started on port ${port}`);
+});
